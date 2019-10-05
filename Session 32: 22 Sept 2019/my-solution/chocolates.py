@@ -77,24 +77,18 @@ count=1
 select=[]
 sum1=0
 for P in finalans:
-    #print(P)
     count=1
     sum1=0
     inhand=1
     for i in range(0,len(P)):
-        #print(P[i],inhand,count)
         if P[i]<0:
             if -(P[i])>inhand:
                 count+=(-P[i]-inhand+1)
                 inhand=1
-                #count+=(-sum(P[0:i])-P[i])
-                #print(P,i,count)
                 
             else:
                 inhand+=P[i]
-                #print('inhand',inhand)
                 if inhand==0:
-                    #print('in')
                     count+=1
                     inhand=1
         else:
