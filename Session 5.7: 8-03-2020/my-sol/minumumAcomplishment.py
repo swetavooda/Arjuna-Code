@@ -6,8 +6,7 @@ else:
     dictionary = {} # this will contain the current day and the job that was last finished
     for i,job in enumerate(a):
         # the best case scenario where all jobs need to be finished in one day 
-        dictionary[0, i] = max(dictionary.get((0, i-1), 0), job)
-    
+        dictionary[0, i] = max(dictionary.get((0, i-1), 0), job)    
             
     for i in range(1, n):
         for j in range(i, len(a)):
